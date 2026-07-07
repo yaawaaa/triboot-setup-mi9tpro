@@ -25,24 +25,29 @@ Run these commands in your terminal to automatically set up and transfers the re
 ```cmd
 mkdir -p /sdcard/Triboot_Assets
 ```
+
 2. Back up and transfer the fresh(rooted) Android boot image 
 ```cmd
 dd if=/dev/block/by-name/boot of=/sdcard/Triboot_Assets/boot_android.img bs=4096
 ```
+
 3. Back up the fresh Android DTBO image (required for the script)
 ```cmd
 dd if=/dev/block/by-name/dtbo of=/sdcard/Triboot_Assets/dtbo_android.img bs=4096
 ```
+
 4. Push the custom U-Boot bootloader to the master assets folder
 > Replace `/path/to/your/u-boot.img` with the actual path of the image
 ```cmd
 ./adb push "/path/to/your/u-boot.img" /sdcard/Triboot_Assets/u-boot_ubuntu.img
 ```
+
 5. Push the Linux kernel to the master assets folder
 > Replace `/path/to/your/xiaomi-k20pro-boot.img` with the actual path of the image
 ```cmd
 ./adb push "/path/to/your/xiaomi-k20pro-boot.img" /sdcard/Triboot_Assets/kernel_ubuntu.img
 ```
+
 6. Push the UEFI to the master assets folder
 > Replace `/path/to/your/uefi.img` with the actual path of the image but it will be most likely on `/sdcard/uefi.img`
 ```cmd
@@ -59,6 +64,7 @@ To ensure your triple-boot script runs without dependency errors, you need to ad
 ```cmd
 fastboot flash /path/to/your/ofox.img
 ```
+
 2. Locate Parted on Your Computer
 Download parted and Copy it into your `C:\adb\` folder.
 
@@ -67,6 +73,7 @@ Reboot your phone into OrangeFox recovery, connect it to your PC, and run this c
 ```cmd
 ./adb push parted /sdcard/Triboot_Assets/parted
 ```
+
 4. Make Parted a Global System Command
 Open the terminal inside OrangeFox (or run ./adb shell from your PC) and run these two lines to copy parted into the recovery's active system path and grant it execution permissions:
 ```cmd
