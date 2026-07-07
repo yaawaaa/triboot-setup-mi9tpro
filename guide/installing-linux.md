@@ -55,16 +55,20 @@ dd if=/dev/block/by-name/dtbo of=/sdcard/Triboot_Assets/dtbo_android.img bs=4096
 
 ### Injecting Parted into OrangeFox
 To ensure your triple-boot script runs without dependency errors, you need to add the `parted` utility to your recovery environment.
-
-1. Locate Parted on Your Computer
+1. Flash the OrangeFox recovery provided in this guide in fastboot
+> Replace `/path/to/your/ofox.img` with the actual path of the image
+```cmd
+fastboot flash /path/to/your/ofox.img
+```
+2. Locate Parted on Your Computer
 Download parted and Copy it into your `C:\adb\` folder.
 
-2. Push Parted to Your Asset Vault
+3. Push Parted to Your Asset Vault
 Reboot your phone into OrangeFox recovery, connect it to your PC, and run this command in PowerShell to send the binary over:
 ```cmd
 ./adb push parted /sdcard/Triboot_Assets/parted
 ```
-3. Make Parted a Global System Command
+4. Make Parted a Global System Command
 Open the terminal inside OrangeFox (or run ./adb shell from your PC) and run these two lines to copy parted into the recovery's active system path and grant it execution permissions:
 ```cmd
 cp /sdcard/Triboot_Assets/parted /sbin/parted
