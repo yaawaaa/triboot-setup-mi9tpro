@@ -13,6 +13,9 @@
 
 - [Shortcut for OrangeFox]()
 
+- [Termux]()
+
+- [Termux:Widget]()
 
 ### Boot into the recovery
 Push the triboot.sh script to `/sdcard/` and run this command:
@@ -48,9 +51,44 @@ sudo bash ~/shortcutsforubuntu.sh
 This is a ONE TIME STEP and it will create an Android and Windows shortcut/application that you could access in the app launcher of Ubuntu.
 
 ### Switching OS'es Directly Inside Android
-Boot back to Android using the shortcuts if they work, if they don't go to [Troubleshooting]() page.
+Boot back to Android using the shortcuts if they work, if they don't go to [Troubleshooting]() page. Root should be on for these steps.
+1. Install **Termux** and **Termux:Widget** and run this command:
+```cmd
+mkdir -p ~/.shortcuts/tasks
+```
+2. Create the Ubuntu Boot Button
+Run this single line in Termux to build your automated Ubuntu launcher script:
+```cmd
+echo -e '#!/data/data/com.termux/files/usr/bin/sh\nsu -c "sh /sdcard/triboot.sh ubuntu"' > ~/.shortcuts/tasks/Boot_Ubuntu.sh
+```
+(Optional) Create the Windows Boot Button
+```cmd
+echo -e '#!/data/data/com.termux/files/usr/bin/sh\nsu -c "sh /sdcard/triboot.sh windows"' > ~/.shortcuts/tasks/Boot_Windows.sh
+```
+4. Grant Executive Permissions
+Tell the Android system these scripts are allowed to execute automatically:
+```cmd
+chmod +x ~/.shortcuts/tasks/*
+```
+5. Add the Boot Buttons to Your Home Screen
+Long-press on an empty space on your Android home screen and select **Widgets**. Scroll down to **Termux**, select the **Termux:Widget** option, and drag it onto your screen. A menu will appear displaying your `Boot_Ubuntu.sh` and `Boot_Windows.sh` scripts, which you can now tap to launch.
+
+### Switching OS'es Directly Inside Recovery
+1. While in Android, open termux and run this command:
+```cmd
+pkg install zip -y
+```
+2. After running it, copy **ofoxshortcuts.sh** to `/sdcard/` and run this command:
+```cmd
+sudo bash /sdcard/ofoxshortcuts.sh
+```
+3. You should see 3 .zip files that you could flash if you are in OrangeFox Recovery.
+
+
 ### Switching Operating Systems
 You are not locked into one OS. You can easily switch between your installed systems (Ubuntu, Windows, or Android) by using the shortcuts
+
+
 
 ## Finished!
 
