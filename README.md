@@ -24,6 +24,7 @@ All the files here have been contributed by other brave community members, here 
 ## Maintainers
 [<img alt="qaz6750" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/66907230?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/qaz6750)
 [<img alt="sunflower2333" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/54024877?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/sunflower2333)
+@voxelsy (for Ubuntu)
 
 
 ## Contributors
