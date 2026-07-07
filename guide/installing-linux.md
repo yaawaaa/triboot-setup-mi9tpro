@@ -3,9 +3,9 @@
 ### Prerequisites
 - [Ubuntu Image](https://sourceforge.net/projects/linux-raphael/files/)
 
-- [parted]()
+- [parted](https://github.com/yaawaaa/woa-raphael1/releases/latest/download/parted)
 
-- [OrangeFox Recovery]()
+- [OrangeFox Recovery](https://github.com/yaawaaa/woa-raphael1/releases/latest/download/recovery.img)
   
 ### Flashing the Ubuntu Rootfs
 > [!NOTE]
