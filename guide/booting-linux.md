@@ -7,15 +7,15 @@
   or
 - An OrangeFox recovery that has parted
   
-- [triboot script]()
+- [triboot script](https://github.com/yaawaaa/woa-raphael1/releases/download/scripts/triboot.sh)
 
-- [Shortcut for Ubuntu]()
+- [Shortcut for Ubuntu](https://github.com/yaawaaa/woa-raphael1/releases/download/scripts/shortcutsforubuntu.sh)
 
-- [Shortcut for OrangeFox]()
+- [Shortcut for OrangeFox](https://github.com/yaawaaa/woa-raphael1/releases/download/scripts/ofoxshortcuts.sh)
 
-- [Termux]()
+- [Termux](https://f-droid.org/en/packages/com.termux/)
 
-- [Termux:Widget]()
+- [Termux:Widget](https://f-droid.org/en/packages/com.termux.widget/)
 
 ### Boot into the recovery
 Push the triboot.sh script to `/sdcard/` and run this command:
