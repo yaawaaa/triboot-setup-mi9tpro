@@ -1,41 +1,25 @@
-<img align="right" src="https://github.com/new-WoA-Raphael/woa-raphael/blob/main/media/raphaelbutnotass.png" width="350" alt="Windows 11 running on a Redmi K20 Pro">
+# Running tripleboot on the Xiaomi Mi 9T Pro / Redmi K20 Pro
 
-# Running Windows on the Xiaomi Mi 9T Pro / Redmi K20 Pro
+## Triple-Boot Status
+This project has reached its final stages. Small improvements may be made, but don't expect major improvements lol.
 
-## Project Status
-This project has reached its final stages. Small improvements may be made, but don't expect major improvements (such as working camera)
+#### Android
+- [x] Everything lol (depends on your rom)
 
-#### Features
-- [x] Audio (Speakers)
-- [x] Audio (3.5mm)
-- [x] Battery status
-- [x] Bluetooth
-- [x] Brightness
-- [ ] Camera
-- [x] Charging ```VERY slow```
-- [x] Display
-- [ ] Flashlight
-- [x] GPU
-- [x] SMS 
-- [x] Touchscreen
-- [x] LTE ```SIM card must be in SIM1 slot```
-- [x] Microphone
-- [x] UFS
-- [x] USB
-- [x] Wi-Fi
+#### Windows on ARM
+Please refer to this [status and the github link](https://github.com/new-WoA-Raphael/woa-raphael/blob/main/guide/status.md).
 
-#### Sensors
-- [x] Accelerometer
-- [ ] Fingerprint
-- [x] GPS
-- [ ] Gyroscope
-- [x] Light sensor
-- [ ] Magnetometer
-- [ ] Proximity
-
-#### Security
-- [ ] Security Processor ```Impossible to get working, Xiaomi broke the firmware```
-- [ ] TPM (Software Backed)
+#### Linux
+* [x] Wi-Fi (2.4GHz, 5GHz)
+* [x] Bluetooth (file transfer, audio)
+* [x] USB (SSH, OTG)
+* [x] Battery
+* [x] Real-time clock
+* [x] Display
+* [x] Touchscreen
+* [x] Flashlight (LED with adjustable brightness)
+* [x] GPU
+* [x] FDE (Full Disk Encryption)
 
 
 
