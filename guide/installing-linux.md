@@ -1,25 +1,18 @@
-<img align="right" src="https://github.com/new-WoA-Raphael/woa-raphael/blob/main/media/raphaelbutnotass.png" width="350" alt="Windows 11 running on a Redmi K20 Pro">
-
-# Running Windows on the Xiaomi Mi 9T Pro / Redmi K20 Pro
-
-## Rooting your device
+# Installing Linux on your device
 
 ### Prerequisites
-- [Magisk](https://github.com/topjohnwu/Magisk/releases/latest)
+- [Ubuntu Image](https://sourceforge.net/projects/linux-raphael/files/)
   
-### Copying your boot image to Android
-- Connect your phone to your computer (with USB debugging enabled).
-- Click the prompt on your phone to allow your computer to access your phone's data. If no prompt appears, go to your notification panel and click the USB notification, then change the connection type to **transferring files**.
-- Copy the **boot.img** file from the **platform-tools** folder into your internal storage.
+### Flashing the Ubuntu Rootfs
+> [!NOTE]
+> Make sure your device is in TWRP mode for this step.
 
-#### Patching the boot image
-- Download and install **Magisk**, then open it.
-- Press **Install** > **Patch a file** and select the **boot.img** you just copied.
-- Once the patching has finished, locate  **magisk_patched-27000_XXXX.img** in your **Downloads** folder and copy it into the **platform-tools** folder on your computer.
+1. Move your chosen Ubuntu rootfs image file (like the Phosh 7.1 build) onto your phone's storage or a USB OTG drive. 
+2. You can perform this step using the TWRP terminal directly on the phone, or by using an ADB terminal on your PC.
 
-### Reboot to fastboot mode
+Execute the following command to flash the image file to the dedicated Linux partition:
 ```cmd
-adb reboot bootloader
+dd if=/path/to/your/rootfs.img of=/dev/block/by-name/ubuntu bs=4096
 ```
 
 #### Flashing your rooted boot image
