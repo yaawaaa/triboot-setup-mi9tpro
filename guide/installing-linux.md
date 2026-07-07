@@ -48,6 +48,11 @@ dd if=/dev/block/by-name/dtbo of=/sdcard/Triboot_Assets/dtbo_android.img bs=4096
 ```cmd
 ./adb push "/path/to/your/uefi.img" /sdcard/Triboot_Assets/uefi_windows.img
 ```
+
+> [!WARNING]
+> **Recovery Compatibility:** This injection method has only been tested and verified to work with the specific version of **OrangeFox Recovery** provided in this guide. Using other recovery environments may lead to unexpected behavior or boot failures. Use it with caution.
+> You could use the recovery provided in the WOA guide but in my case it didn't boot when I messed up the automatic flashing.
+
 ### Injecting Parted into OrangeFox
 To ensure your triple-boot script runs without dependency errors, you need to add the `parted` utility to your recovery environment.
 
