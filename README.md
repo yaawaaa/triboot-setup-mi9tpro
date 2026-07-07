@@ -14,17 +14,9 @@ All the files here have been contributed by other brave community members, here 
 
 - [Installation instructions](guide/partitioning-linux.md)
 
-- [Troubleshooting](guide/troubleshooting.md)
-
 
 ## Miscellaneous
-- [Tripleboot setup](guide/4-tripleboot.md)
-
-- [Additional materials](guide/materials.md)
-
-- [Update drivers](guide/update-drivers.md)
-
-- [Reinstall instructions](guide/reinstall.md)
+- [Troubleshooting](guide/troubleshooting.md)
 
 - [Uninstall instructions](guide/uninstall.md)
 
