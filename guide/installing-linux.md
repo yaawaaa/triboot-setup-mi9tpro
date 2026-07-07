@@ -2,10 +2,14 @@
 
 ### Prerequisites
 - [Ubuntu Image](https://sourceforge.net/projects/linux-raphael/files/)
+
+- [parted]()
+
+- [OrangeFox Recovery]()
   
 ### Flashing the Ubuntu Rootfs
 > [!NOTE]
-> Make sure your device is in TWRP mode for this step.
+> Make sure your device is in recovery mode for this step.
 
 1. Move your chosen Ubuntu rootfs image file (like the Phosh 7.1 build) onto your phone's storage or a USB OTG drive. 
 2. You can perform this step using the TWRP terminal directly on the phone, or by using an ADB terminal on your PC.
@@ -44,12 +48,31 @@ dd if=/dev/block/by-name/dtbo of=/sdcard/Triboot_Assets/dtbo_android.img bs=4096
 ```cmd
 ./adb push "/path/to/your/uefi.img" /sdcard/Triboot_Assets/uefi_windows.img
 ```
+### Injecting Parted into OrangeFox
+To ensure your triple-boot script runs without dependency errors, you need to add the `parted` utility to your recovery environment.
+
+1. Locate Parted on Your Computer
+Download parted and Copy it into your `C:\adb\` folder.
+
+2. Push Parted to Your Asset Vault
+Reboot your phone into OrangeFox recovery, connect it to your PC, and run this command in PowerShell to send the binary over:
+```cmd
+./adb push parted /sdcard/Triboot_Assets/parted
+```
+3. Make Parted a Global System Command
+Open the terminal inside OrangeFox (or run ./adb shell from your PC) and run these two lines to copy parted into the recovery's active system path and grant it execution permissions:
+```cmd
+cp /sdcard/Triboot_Assets/parted /sbin/parted
+chmod +x /sbin/parted
+```
+
 Before finalizing, these files should be in the asset directory for your triple-boot script:
    - **boot_android.img** `(Your Android custom ROM kernel)`
    - **dtbo_android.img** `(Your Android custom ROM dtbo)`
    - **uefi_windows.img** `(The EDK2 UEFI boot file for Windows)`
    - **u-boot_ubuntu.img** `(Voxelsy's u-boot.img file renamed)`
    - **kernel_ubuntu.img** `(Voxelsy's xiaomi-k20pro-boot.img file renamed)`
+   - **parted** `(a partitioner without an extension)`
 
 ## [Next step: Booting Linux](booting-linux.md)
 
