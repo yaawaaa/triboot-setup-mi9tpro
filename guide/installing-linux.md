@@ -36,6 +36,9 @@ Before finalizing, these files should be in the asset directory for your triple-
    - **u-boot_ubuntu.img** `(Voxelsy's u-boot.img file renamed)`
    - **kernel_ubuntu.img** `(Voxelsy's xiaomi-k20pro-boot.img file renamed)`
 ```
+For u-boot_ubuntu.img just rename Voxelsy's u-boot.img file
+For kernel_ubuntu.img just rename Voxelsy's xiaomi-k20pro-boot.img file
+For uefi_windows.img just rename the UEFI that is provided
 ```
 #### Finishing setup
 - Open the **Magisk** app again.
