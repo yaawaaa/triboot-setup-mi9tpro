@@ -11,6 +11,7 @@
 2. You can perform this step using the TWRP terminal directly on the phone, or by using an ADB terminal on your PC.
 
 Execute the following command to flash the image file to the dedicated Linux partition:
+> Replace `/path/to/your/rootfs.img` with the actual path of the image, such as /usb_otg/rootfs.img
 ```cmd
 dd if=/path/to/your/rootfs.img of=/dev/block/by-name/ubuntu bs=4096
 ```
